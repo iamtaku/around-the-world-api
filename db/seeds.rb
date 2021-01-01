@@ -26,11 +26,10 @@ data['key'].each do |item|
 
   hash['living']['lived_in'].each do |place|
     place = Place.create!(location: place['place'])
-    livedIn = LivedIn.new(year: place['year'])
-    livedIn.place = place
-    livedIn.person = person
-    livedIn.save
-    progressbar.increment
+    lived_in = LivedIn.new(year: place['year'])
+    lived_in.place = place
+    lived_in.person = person
+    progressbar.increment if lived_in.save
   end
   next if hash['living']['home'].nil?
 

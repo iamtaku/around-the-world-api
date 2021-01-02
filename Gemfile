@@ -26,6 +26,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'rack-cors'
 gem 'geocoder'
 gem 'ruby-progressbar'
+gem 'jsonapi-serializer'
+gem 'rack-cors'
 
 
 

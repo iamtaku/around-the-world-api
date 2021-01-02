@@ -33,7 +33,7 @@ data['key'].each do |item|
   end
   next if hash['living']['home'].nil?
 
-  person.home = Place.create!(location: hash['living']['home'])
+  person.home = Place.create!(location: hash['living']['home']).id
   person.save
 end
 puts "\n ... \n\n Created #{Person.all.count} people!"
